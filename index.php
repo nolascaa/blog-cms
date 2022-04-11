@@ -23,8 +23,8 @@
               color: white;
             }
         </style>
-        <a href="index.html">Home</a>
-        <a href="post-submission.html">Post Submission</a>
+        <a href="index.php">Home</a>
+        <a href="post-submission.php">Post Submission</a>
     </nav>
     
     <style>
