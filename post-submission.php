@@ -1,31 +1,7 @@
-<html>
-    <header>
-        <style>
-            header {
-              text-align: center;
-              padding: 3px;
-              background-color: DarkSalmon;
-              color: white;
-            }
-        </style>
-
-        <h1>My Blog</h1>
-        <p>Advanced Web Projects: Blog CMS Website</p>
-    </header>
-
-    <nav>
-        <style>
-            nav {
-              text-align: center;
-              padding: 20px;
-              font-size: 120%;
-              background-color: rgb(255, 255, 255);
-              color: white;
-            }
-        </style>
-        <a href="index.php">Home</a>
-        <a href="post-submission.php">Post Submission</a>
-    </nav>
+<?php
+    include 'header.php';
+    include 'nav.php';
+?>
     
     <style>
     main{
@@ -65,15 +41,7 @@
           </form>
     </main>
 
-    <footer>
-        <style>
-            footer {
-              text-align: center;
-              padding: 3px;
-              background-color: rgb(184, 97, 111);
-              color: white;
-            }
-        </style>
-        <p>Created by Aaron Nolasco</p>
-    </footer>
+    <?php
+    include 'footer.php';
+    ?>
 </html>
