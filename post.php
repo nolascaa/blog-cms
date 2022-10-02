@@ -49,7 +49,7 @@
 
       <?php
           // Post details contains all the data to generate the blog from
-            $postDetails - getPostDetailsFromDatabase();
+            $postDetails = getPostDetailsFromDatabase();
 
       ?>
       <h1> <?php echo $postDetails["title"]; ?> <h1>
