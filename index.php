@@ -1,6 +1,7 @@
 <?php
     include 'header.php';
     include 'nav.php';
+    include_once 'db_connect.php'
 ?>
     
     <style>
