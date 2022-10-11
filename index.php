@@ -2,6 +2,7 @@
     include 'header.php';
     include 'nav.php';
 ?>
+<html>
     
     <style>
     main{
@@ -25,6 +26,7 @@
       }
     </style>
     
+    <body>
     <main>
       <?php
           function getPostTitlesFromDatabase() {
@@ -37,6 +39,8 @@
         <ul>
           <?php
               $postTitles = getPostTitlesFromDatabase();
+              $postDetails = getPostDetailsFromDatabase();
+
 
               foreach($postTitles as $postTitle) {
                   echo "<li><a href='post.php?title=" . $postTitle . "'>" . $postTitle .
@@ -49,4 +53,5 @@
     <?php
     include 'footer.php';
     ?>
+    </body>
 </html>
