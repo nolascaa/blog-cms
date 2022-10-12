@@ -6,22 +6,22 @@
   </title>
 </head>
 <?php
-function getPostDetailsFromDatabase()
-{
-  // Get the post title
-  $postTitle = rawurldecode($_GET["title"]);
 
-  // Get the post that matches the postTitle
+function getPostTitlesFromDatabase()
+{
+  // Get all the post titles from the posts table
   include_once './includes/db_connect.php';
-  $sql = "SELECT * FROM posts WHERE title='" . $postTitle . "'";
+  $sql = "SELECT title FROM posts";
   $result = mysqli_query($conn, $sql);
 
-  // Get the first row from the result as an associative array
-  $postDetails = mysqli_fetch_assoc($result);
-  return $postDetails;
+  // Get each result row as an assoc array, then add title to $postTitles
+  $postTitles = array();
+  while ($row = mysqli_fetch_assoc($result)) {
+    array_push($postTitles, $row['title']);
+  }
+  return $postTitles;
 }
 ?>
-
 
 <style>
   main {
@@ -29,6 +29,7 @@ function getPostDetailsFromDatabase()
     padding: 20px;
     background-color: rgb(230, 189, 189);
   }
+
   main>h1,
   p,
   .browser {
@@ -53,28 +54,15 @@ function getPostDetailsFromDatabase()
   include 'nav.php';
   ?>
   <main>
-    <?php
-    function getPostTitlesFromDatabase()
-    {
-      // TODO in Module 4
-      // get this data from a database instead of hardcoding it
-      $postTitles = array("Blog Post 1", "Blog Post 2", "Blog Post 3");
-      return $postTitles;
-    }
-    ?>
     <ul>
       <?php
       $postTitles = getPostTitlesFromDatabase();
-      $postDetails = getPostDetailsFromDatabase();
-
-
       foreach ($postTitles as $postTitle) {
         echo "<li><a href='post.php?title=" . $postTitle . "'>" . $postTitle .
           "</a></li>";
       }
-
-      echo "<p>$postDetails</p>"
       ?>
+
     </ul>
   </main>
 
