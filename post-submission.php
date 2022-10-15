@@ -38,6 +38,10 @@
             Tell us your story
             </textarea>
             <input type="submit" value="Submit">
+
+            //add redirect to show post we submitted
+
+            //create page that inserts row into database
           </form>
     </main>
 
