@@ -19,7 +19,8 @@ function getPostDetailsFromDatabase()
   return $postDetails;
 }
 ?>
-
+     <link rel="stylesheet" href="style.css">
+     
 <main>
 
   <?php

@@ -6,6 +6,7 @@
   </title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <?php
 
 function getPostTitlesFromDatabase()
@@ -32,6 +33,7 @@ function getPostTitlesFromDatabase()
   <main>
     <ul>
       <?php
+      // Display post titles
       $postTitles = getPostTitlesFromDatabase();
       foreach ($postTitles as $postTitle) {
         echo "<li><a href='post.php?title=" . $postTitle . "'>" . $postTitle .
