@@ -1,7 +1,11 @@
+<DOCTYPE html>
 <html>
 
 <head>
-<script src="hello.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.1.min.js"
+        integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+        crossorigin="anonymous"></script>
+  <script src="js/script.js"></script>
   <title>
     Aaron's Blog CMS
   </title>
@@ -27,10 +31,15 @@ function getPostTitlesFromDatabase()
 ?>
 
 <body>
-  <?php
+  <h1 style="text-align:center; color:rgb(230, 189, 189);" id="hidden">I was hidden!</h1>
+  <button onClick="revealMessage()">Hello</button>
+  <p id="hiddenMessage" style="display:none">Hi There!</p>
+
+  <?php //Refactored header and navigation elements
   include 'header.php';
   include 'nav.php';
   ?>
+
   <main>
     <ul>
       <?php
