@@ -1,6 +1,7 @@
 <html>
 
 <head>
+<script src="hello.js"></script>
   <title>
     Aaron's Blog CMS
   </title>
